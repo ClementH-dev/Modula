@@ -1,15 +1,15 @@
-import express from 'express';
+import 'dotenv/config';
 import dotenv from 'dotenv';
-
-// Récupère les variables d'environnement
-dotenv.config();
+import express from 'express';
+import { prisma } from './db/prisma';
 
 // Initialise l'application Express
 const app = express();
 app.use(express.json());
 
 // Route de test
-app.get('/health', (_req, res) => {
+app.get('/health', async (_req, res) => {
+    await prisma.$queryRaw`SELECT 1`; // Test de connexion à la base de données 
     res.json({ status: 'ok' });
 })
 
