@@ -1,8 +1,8 @@
-# Modula — Socle applicatif backend
+# Modula — Socle applicatif full-stack
 
 ## 🎯 Objectif
 
-Modula est un **socle backend réutilisable**, conçu pour servir de base à plusieurs projets
+Modula est un **socle full-stack réutilisable**, conçu pour servir de base à plusieurs projets
 (clients, produits internes, SaaS), sans repartir de zéro à chaque fois.
 
 Chaque nouveau projet est créé à partir d’un **fork du repository**, avec :
