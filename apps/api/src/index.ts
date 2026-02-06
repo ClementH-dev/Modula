@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import dotenv from 'dotenv';
 import express from 'express';
 import { prisma } from './db/prisma';
 
