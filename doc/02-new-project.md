@@ -48,7 +48,7 @@ npx prisma generate
 npx prisma db pull
 ```
 
-## Mettre a jour son forl
+## Mettre a jour son fork
 
 1. Récupérez les dernières modifications du repository original :
 ```bash
