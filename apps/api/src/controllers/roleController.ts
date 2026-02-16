@@ -26,7 +26,6 @@ export const createRole = async (req: Request, res: Response) => {
         }
 
         // Vérifier que le nom de role est valide
-        type RoleEnumType = keyof typeof RoleEnum;
         if (!Object.keys(RoleEnum).includes(name)) {
             return res.status(400).json({ error: 'Le nom du rôle est invalide' });
         }

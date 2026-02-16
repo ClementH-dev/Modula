@@ -4,6 +4,7 @@ import { prisma } from './db/prisma';
 
 // Importation des routes
 import roleRoute from './routes/roleRoute';
+import userRoute from './routes/userRoute';
 
 // Initialise l'application Express
 const app = express();
@@ -18,8 +19,10 @@ apiRouter.get('/health', async (_req, res) => {
     res.json({ status: 'ok' });
 })
 
-// Routes de roles 
+// Routes
 apiRouter.use('/roles', roleRoute);
+apiRouter.use('/users', userRoute);
+
 
 // Monter le routeur avec le préfixe /api
 app.use('/api', apiRouter);

@@ -8,3 +8,5 @@
 ```bash
 npx prisma migrate dev --name update-roles 
 ```
+
+3. Vérifier le role par défaut lors de la création d'un utilisateur dans le fichier [userController.ts](../apps/api/src/controllers/userController.ts) et mettez à jour si nécessaire.
