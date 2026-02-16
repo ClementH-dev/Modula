@@ -10,7 +10,7 @@ datasource db {
 model User {
   id     String  @id @default(uuid())
   email  String  @unique
-  roles  Role[]  @relation("UserRoles")
+  roles  UserRole[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -18,7 +18,16 @@ model User {
 model Role {
   id     String  @id @default(uuid())
   name   RoleName @unique
-  users  User[]  @relation("UserRoles")
+  users  UserRole[] 
+}
+
+model UserRole {
+  userId String
+  roleId String
+  user   User @relation(fields: [userId], references: [id])
+  role   Role @relation(fields: [roleId], references: [id])
+
+  @@id([userId, roleId])
 }
 
 enum RoleName {
