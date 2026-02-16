@@ -1,8 +1,9 @@
 model Role {
-    id     String  @id @default(uuid())
-    name   RoleEnum @unique
-    roleUsers RoleUser[]
-    @@map("roles")
+  id        String     @id @default(uuid())
+  name      RoleEnum   @unique
+  roleUsers RoleUser[]
+
+  @@map("roles")
 }
 
 enum RoleEnum {

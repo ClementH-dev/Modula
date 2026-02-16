@@ -1,10 +1,9 @@
 model RoleUser {
-    user_id String
-    role_id String
+  user_id String
+  role_id String
+  role    Role   @relation(fields: [role_id], references: [id])
+  user    User   @relation(fields: [user_id], references: [id])
 
-    user User @relation(fields: [user_id], references: [id])
-    role Role @relation(fields: [role_id], references: [id])
-
-    @@id ([user_id, role_id])
-    @@map("role_users")
+  @@id([user_id, role_id])
+  @@map("role_users")
 }
